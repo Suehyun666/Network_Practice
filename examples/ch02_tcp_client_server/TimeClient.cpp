@@ -45,6 +45,8 @@ int main (int argc, char* argv[]) {
         char sztime[100] = {0};
         recv (sock, sztime, sizeof(sztime), 0);
         cout << "Current time from server: " << sztime << endl;
+        // only need to ParallelTime Server
+        send (sock, "FINISH", 6, 0);
     }
     catch (const char* msg)
     {

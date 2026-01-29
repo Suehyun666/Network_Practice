@@ -98,6 +98,11 @@ DWORD WINAPI CommThread (LPVOID pvoid)
 
     sprintf (sztime, "%.19s\n", asctime(newtime));
     send(commsock, sztime, (int) strlen (sztime), 0);
+
+
+    char szdata[10];
+    recv(commsock, szdata, (int) strlen (szdata), 0);
+    Sleep (100);
     closesocket(commsock);
 
     return 0;
