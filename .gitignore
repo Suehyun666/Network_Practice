@@ -521,3 +521,10 @@ MigrationBackup/
 .ionide/
 
 # End of https://www.toptal.com/developers/gitignore/api/vs,clion,c++,visualstudiocode
+
+.idea
+.vscode
+
+build/
+bin/
+out/
